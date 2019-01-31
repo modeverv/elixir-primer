@@ -18,6 +18,7 @@ defmodule ModestGreeter.Router do
 
     #    get "/", PageController, :index
     get "/hello", HelloController, :show
+    get "/hello/:name", HelloController, :show    
   end
 
   # Other scopes may use custom stacks.
