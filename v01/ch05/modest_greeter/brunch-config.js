@@ -64,9 +64,15 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+      enabled: true,
+      globals: {
+	  $: "jquery",
+	  jQuery: "jquery",
+	  Popper: "popper.js",
+	  Tether: "tether"
+      }
   },
-    watcher: {
-	usePolling: true
-    }
+  watcher: {
+    usePolling: true
+  }
 };
