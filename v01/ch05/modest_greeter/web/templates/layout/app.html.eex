@@ -12,9 +12,15 @@
   </head>
 
   <body>
-    <%= render @view_module, @view_template, assigns %>
-
-    </div> <!-- /container -->
+    <header>
+      <h1>ModestGreeter</h1>
+    </header>
+    <main>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+    <footer>
+      &copy; 2018 lovesaemi.daemon.asia
+    </footer>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
