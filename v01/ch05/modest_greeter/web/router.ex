@@ -16,7 +16,8 @@ defmodule ModestGreeter.Router do
   scope "/", ModestGreeter do
     pipe_through :browser # Use the default browser stack
 
-    #    get "/", PageController, :index
+    #get "/", PageController, :index
+    get "/", TopController, :index
     get "/hello", HelloController, :show
     get "/hello/:name", HelloController, :show    
   end
