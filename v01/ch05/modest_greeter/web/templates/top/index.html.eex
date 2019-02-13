@@ -4,3 +4,10 @@
   <hr>
   <p><%= link "このサイトについて", to: top_path(@conn, :about, []) %></p>
 </div>
+<nav class="nav justify-content-center mb-3">
+  <a href="/hello/Alice" class="nav-link">Alice</a>
+  <%= link "Bob", to: "/hello/Bob", class: "nav-link" %>
+  <%= link "Charie", to: hello_path(@conn, :show, "Charie", []), class: "nav-link" %>
+  <%= link "Pess", to: hello_path(@conn, :show, "Pess", []), class: "nav-link" %>  
+</nav>
+
