@@ -1,3 +1,6 @@
+<%
+names = ~w(A B C)
+%>
 <div class="jumbotron m-3">
   <h1 class="display-3"><%= document_title(assigns) %></h1>
   <p class="lead">ModestGreeterへようこそ</p>
@@ -8,6 +11,9 @@
   <a href="/hello/Alice" class="nav-link">Alice</a>
   <%= link "Bob", to: "/hello/Bob", class: "nav-link" %>
   <%= link "Charie", to: hello_path(@conn, :show, "Charie", []), class: "nav-link" %>
-  <%= link "Pess", to: hello_path(@conn, :show, "Pess", []), class: "nav-link" %>  
+  <%= link "Pess", to: hello_path(@conn, :show, "Pess", []), class: "nav-link" %>
+  <%= for name <- names do %>
+      <%= link name, to: hello_path(@conn, :show, name, []), class: "nav-link"%>
+  <% end %>
 </nav>
 
