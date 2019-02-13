@@ -2,5 +2,5 @@
   <h1 class="display-3"><%= document_title(assigns) %></h1>
   <p class="lead">ModestGreeterへようこそ</p>
   <hr>
-  <p><a href="/about">このサイトについて</a></p>
+  <p><%= link "このサイトについて", to: "/about" %></p>
 </div>
