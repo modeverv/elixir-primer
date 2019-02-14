@@ -1,5 +1,16 @@
 # ModestGreeter
 
+```
+#本番稼働
+mix phoenix.gen.secret
+#=>config/prod.secret.exsにかきこみ
+mix deps.get --only prod
+brunch build --production 
+MIX_ENV=prod mix phoenix. digest 
+MIX_ENV=prod PORT=4000 elixir -S mix do compile, phoenix.server
+MIX_ENV=prod PORT=4000 elixir --detached -S mix do compile, phoenix.server
+```
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
