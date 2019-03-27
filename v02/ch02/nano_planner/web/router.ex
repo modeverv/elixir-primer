@@ -18,6 +18,8 @@ defmodule NanoPlanner.Router do
 
     #    get "/", PageController, :index
     get "/", TopController, :index
+    get "/plan_items", PlanItemsController, :index
+    get "/plan_items/:id", PlanItemsController, :show
   end
 
   # Other scopes may use custom stacks.

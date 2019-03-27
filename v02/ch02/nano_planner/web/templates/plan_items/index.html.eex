@@ -1,0 +1,16 @@
+<!--<p>plan_items#index</p>-->
+<div>
+  <%= link to: plan_items_path(@conn, :index) do %>
+    <i class="fa fa-list"></i>予定表
+  <% end %>
+  <%= for item <- @plan_items do %>
+  <div>
+    <div>
+      <%= item.name %>
+    </div>
+    <div>
+      <%= item.description %>
+    </div>
+  </div>
+  <% end %>
+</div>
