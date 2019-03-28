@@ -26,4 +26,8 @@ insert! %PlanItem{
   name: "帰省",
   description: "実家に帰る"
 }
+insert! %PlanItem{
+  name: "帰省",
+  description: "新幹線の指定席を取る。\nお土産を買う"
+}
 
