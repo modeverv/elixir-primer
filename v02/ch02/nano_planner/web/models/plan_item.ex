@@ -5,6 +5,9 @@ defmodule NanoPlanner.PlanItem do
     field :name, :string
     field :description, :string
 
+    field :starts_at, Timex.Ecto.DateTime
+    field :ends_at, Timex.Ecto.DateTime
+
     timestamps()
   end
 
