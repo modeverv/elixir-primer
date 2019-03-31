@@ -10,6 +10,12 @@ div.plan-items {
         span.plan-item-description {
             font-size: 0.75rem;
         }
+        span.plan-item-duration {
+            font-size: 0.75rem;
+            text-align: right;
+            width: 100%;
+            display:inline-block;
+        }
     }
     div.row:last-child {
         margin-bottom: 0;
