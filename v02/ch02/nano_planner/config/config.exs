@@ -17,8 +17,7 @@ config :nano_planner, NanoPlanner.Endpoint,
   pubsub: [name: NanoPlanner.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
-config :nano_planner,
-  default_timezone: "Asia/Tokyo"
+config :nano_planner, :default_time_zone, "Asia/Tokyo"
 
 # Configures Elixir's Logger
 config :logger, :console,

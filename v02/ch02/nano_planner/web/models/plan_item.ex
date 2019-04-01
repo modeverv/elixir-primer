@@ -21,7 +21,7 @@ defmodule NanoPlanner.PlanItem do
   end
 
   def convert_datetime(items) do
-    alias Timex.TImezone
+    alias Timex.Timezone
     time_zone = Application.get_env(:nano_planner, :default_time_zone)
     Enum.map items, fn(item) ->
       Map.merge(item, %{
