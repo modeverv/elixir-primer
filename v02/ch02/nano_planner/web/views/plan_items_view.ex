@@ -20,7 +20,16 @@ defmodule NanoPlanner.PlanItemsView do
   end
 
   defp formats_ends_at(item) do
-    Strftime.format! item.ends_at, "%Y年%-m月%-d日 %H:%M"
+    fmt = cond do
+      Timex.to_date(item.ends_at) == Timex.to_date(item.starts_at) ->
+	"%H:%M"
+      item.ends_at.year == item.starts_at.year ->
+	"%-m月%-d日 %H:%M"
+      true ->
+	"%Y年%-m月%-d日 %H:%M"
+    end
+    Logger.debug fmt
+    Strftime.format! item.ends_at, fmt
   end
   
   
