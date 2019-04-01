@@ -14,9 +14,7 @@
     </div>
     <div class="col-12">
       <span class="plan-item-duration">
-        <%= Timex.Timezone.convert item.starts_at, "Asia/Tokyo" %>
-        - 
-        <%= Timex.Timezone.convert item.ends_at, "Asia/Tokyo" %>
+	<%= format_duration(item) %>
       </span>
     </div>
   </div>
